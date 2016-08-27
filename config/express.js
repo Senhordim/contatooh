@@ -1,5 +1,5 @@
-var express = require('express');
-var load    = require('express-load');
+var express = require('express')
+	, load    = require('express-load');
 
 module.exports = function(){
 
@@ -13,11 +13,10 @@ module.exports = function(){
 	// middeware
 	app.use(express.static('./public'));
 
-	
-	load('models', {cwd: 'app'})
-		.then('controllers')
-		.then('routes')
-		.into('app');
+	load('models',{cwd:'app'})
+    .then('controllers')
+    .then('routes')
+    .into(app);
 
 
 	return app;
