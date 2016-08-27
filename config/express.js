@@ -12,13 +12,14 @@ module.exports = function(){
 
 	// middeware
 	app.use(express.static('./public'));
+
 	
 	load('models', {cwd: 'app'})
 		.then('controllers')
 		.then('routes')
 		.into('app');
 
+
 	return app;
-	
 };
 
