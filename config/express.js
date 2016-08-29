@@ -1,5 +1,6 @@
-var express = require('express')
-	, load    = require('express-load');
+var express    = require('express')
+	, load       = require('express-load')
+	, bodyParser = require('body-parser');
 
 module.exports = function(){
 
@@ -12,6 +13,11 @@ module.exports = function(){
 
 	// middeware
 	app.use(express.static('./public'));
+
+	// Verbs Delet and PUT
+	app.use(bodyParser.urlencoded({ extended: true }));
+	app.use(bodyParser.json());
+	app.use(require('method-override')());
 
 	load('models',{cwd:'app'})
     .then('controllers')
