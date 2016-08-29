@@ -1,7 +1,7 @@
 var contacts = [
-	{id: 1, nome: 'Diego Collares', email: 'diego.collares@gmail.com'},
-	{id: 2, nome: 'Mariane Collares', email: 'mariane.collares@gmail.com'},
-	{id: 3, nome: 'Laís Collares', email: 'Laís.collares@gmail.com'},
+	{id: 1, name: 'Diego Collares', email: 'diego.collares@gmail.com'},
+	{id: 2, name: 'Mariane Collares', email: 'mariane.collares@gmail.com'},
+	{id: 3, name: 'Laís Collares', email: 'Laís.collares@gmail.com'},
 ];
 
 module.exports = function(){
