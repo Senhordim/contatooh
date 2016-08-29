@@ -1,0 +1,17 @@
+{
+  "name": "contatooh",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Diego Collares <diego.collares@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/Senhordim/contatooh",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
