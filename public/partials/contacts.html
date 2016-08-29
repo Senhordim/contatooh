@@ -1,3 +1,32 @@
-<h1>Bem vindo ao Contatooh</h1>
-<button ng-click="increment()">Novo</button>
+<div class="jumbotron">
+	<h1 class="text-center">
+		Bem vindo ao Contatooh
+	</h1>
+</div>
+
+<button class="btn btn-primary" ng-click="increment()">Novo</button>
+
 <p>Contatos cadastrados: {{total}}</p>
+
+<div class="table-responsive">
+	<table class="table table-hover">
+		<thead>
+			<tr>
+				<th>Nome</th>
+				<th>Email</th>
+				<th class="text-center">Ação</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="#">Contato</a></td>
+				<td><a href="#">contato@seucontao.com.br</a></td>
+				<td class="text-center">
+					<button class="btn btn-warning">
+						Remover
+					</button>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
