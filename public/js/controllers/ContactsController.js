@@ -1,30 +1,17 @@
 contatooh.controller('ContactsController'
-	, function($scope) {
+	, function($scope, $http) {
 
-		$scope.contacts = [
-			{
-				"_id": 1,
-				"name": "Diego Collares",
-				"email": "diego.collares@gmail.com"
-			},
-			{
-				"_id": 2,
-				"name": "Laís Collares",
-				"email": "lais.collares@gmail.com"
-			},
+		$scope.contacts = [];
 
-			{
-				"_id": 3,
-				"name": "Mariane Collares",
-				"email": "mariane.collares@gmail.com"
-			}
-
-		];
-
-		$scope.total = 0;
-		$scope.increment = function(){
-			$scope.total++;
-		};
 		$scope.filterName = "";
+
+		$http.get('/contacts')
+			.success(function(data){
+				$scope.contacts = data;
+			})
+			.error(function(statusText) {
+				console.log("Não foi possivel obter a lista de contatos");
+				console.log(statusText);
+			});
 
 });
